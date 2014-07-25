@@ -51,7 +51,7 @@
     "start": "node node_modules/grunt-cli/bin/grunt"
   },
   "dependencies": {
-    "bitcore": "git://github.com/Dogeparty/dogecore.git#bcfe03eb60c1d35bfb83ea52ffff96d6acaa27e6",
+    "bitcore": "git://github.com/Dogeparty/dogecore.git#e624f8a455e0af851b671a2b031aeb51775b96bf",
     "base58-native": "0.1.2",
     "async": "*",
     "leveldown": "*",
