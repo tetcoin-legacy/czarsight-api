@@ -1,41 +1,56 @@
 'use strict';
 
 // server-side socket behaviour
-// io is a variable already taken in express
-var ios = null;
+var ios = null; // io is already taken in express
 var util = require('bitcore').util;
+var logger = require('../../lib/logger').logger;
 
-module.exports.init = function(app, io_ext) {
+module.exports.init = function(io_ext) {
   ios = io_ext;
-  ios.sockets.on('connection', function(socket) {
-    socket.on('subscribe', function(topic) {
-      socket.join(topic);
+  if (ios) {
+    // when a new socket connects
+    ios.sockets.on('connection', function(socket) {
+      logger.verbose('New connection from ' + socket.id);
+      // when it subscribes, make it join the according room
+      socket.on('subscribe', function(topic) {
+        logger.debug('subscribe to ' + topic);
+        socket.join(topic);
+      });
+
+      // disconnect handler
+      socket.on('disconnect', function() {
+        logger.verbose('disconnected ' + socket.id);
+      });
+
     });
+  }
+  return ios;
+};
+
+var simpleTx = function(tx) {
+  return {
+    txid: tx
+  };
+};
+
+var fullTx = function(tx) {
+  var t = {
+    txid: tx.txid,
+    size: tx.size,
+  };
+  // Outputs
+  var valueOut = 0;
+  tx.vout.forEach(function(o) {
+    valueOut += o.valueSat;
   });
+
+  t.valueOut = (valueOut.toFixed(8) / util.COIN);
+  return t;
 };
 
 module.exports.broadcastTx = function(tx) {
   if (ios) {
-    var t;
-    if (typeof tx === 'string') {
-      t = {
-        txid: tx
-      };
-    }
-    
-    else {
-      t = {
-        txid: tx.txid,
-        size: tx.size,
-      };
-      // Outputs
-      var valueOut = 0;
-      tx.vout.forEach(function(o) {
-        valueOut += o.valueSat;
-      });
-
-      t.valueOut = (valueOut.toFixed(8)/util.COIN);
-    }
+    var t = (typeof tx === 'string') ? simpleTx(tx) : fullTx(tx);
     ios.sockets.in('inv').emit('tx', t);
   }
 };

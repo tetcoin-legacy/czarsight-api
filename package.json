@@ -1,7 +1,7 @@
 {
   "name": "insight-bitcore-api",
   "description": "An open-source bitcoin blockchain API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the bitcoin network and build your own services with it.",
-  "version": "0.2.7",
+  "version": "0.2.9",
   "author": {
     "name": "Ryan X Charles",
     "email": "ryan@bitpay.com"
@@ -51,36 +51,41 @@
     "start": "node node_modules/grunt-cli/bin/grunt"
   },
   "dependencies": {
-    "bitcore": "git://github.com/Dogeparty/dogecore.git#7b0c6d502f37b2f0ca48e10bd9aeb2de18337f81",
-    "base58-native": "0.1.2",
     "async": "*",
+    "base58-native": "0.1.2",
+    "bignum": "*",
+    "bitcore": "git://github.com/Dogeparty/dogecore.git#7b0c6d502f37b2f0ca48e10bd9aeb2de18337f81",
+    "bufferput": "git://github.com/bitpay/node-bufferput.git",
+    "buffertools": "*",
+    "commander": "^2.3.0",
+    "connect-ratelimit": "git://github.com/dharmafly/connect-ratelimit.git#0550eff209c54f35078f46445000797fa942ab97",
+    "express": "~3.4.7",
+    "glob": "*",
     "leveldown": "*",
     "levelup": "*",
-    "glob": "*",
-    "soop": "=0.1.5",
-    "commander": "*",
-    "bignum": "*",
-    "winston": "*",
-    "express": "~3.4.7",
-    "buffertools": "*",
-    "should": "~2.1.1",
-    "socket.io": "~1.0.4",
     "moment": "~2.5.0",
+    "preconditions": "^1.0.7",
+    "should": "~2.1.1",
     "sinon": "~1.7.3",
+    "socket.io": "1.0.6",
+    "socket.io-client": "1.0.6",
+    "soop": "=0.1.5",
+    "winston": "*",
     "xmlhttprequest": "~1.6.0",
-    "bufferput": "git://github.com/bitpay/node-bufferput.git"
+    "microtime": "^0.6.0"
   },
   "devDependencies": {
+    "chai": "*",
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.11",
-    "grunt-env": "~0.4.1",
+    "grunt-concurrent": "~0.4.2",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-concurrent": "~0.4.2",
-    "grunt-nodemon": "~0.2.0",
+    "grunt-env": "~0.4.1",
+    "grunt-markdown": "~0.5.0",
     "grunt-mocha-test": "~0.8.1",
-    "should": "2.1.1",
-    "chai": "=1.9.1",
-    "grunt-markdown": "~0.5.0"
+    "grunt-nodemon": "~0.2.0",
+    "memdown": "^0.10.2",
+    "should": "2.1.1"
   }
 }

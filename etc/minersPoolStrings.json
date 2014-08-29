@@ -22,6 +22,27 @@
       ]
    },
    {
+      "poolName":"AntMiner",
+      "url":"https://bitmaintech.com/",
+      "searchStrings":[
+         "AntPool"
+      ]
+   },
+   {
+      "poolName":"agentD",
+      "url":"http://",
+      "searchStrings":[
+         "agentD"
+      ]
+   },
+   {
+      "poolName":"Bitfury",
+      "url":"http://bitfury.org/",
+      "searchStrings":[
+         "2av0id51pct"
+      ]
+   },
+   {
       "poolName":"BitMinter",
       "url":"https://bitminter.com/",
       "searchStrings":[
@@ -44,6 +65,13 @@
       ]
    },
    {
+      "poolName":"bcpool.io",
+      "url":"https://bcpool.io/",
+      "searchStrings":[
+         "bcpool"
+      ]
+   },
+   {
       "poolName":"Discus Fish",
       "url":"http://f2pool.com/",
       "searchStrings":[
@@ -57,6 +85,13 @@
       "url":"http://f2pool.com/",
       "searchStrings":[
          "For Pierce and Paul"
+      ]
+   },
+   {
+      "poolName":"Cointerra",
+      "url":"http://cointerra.com/",
+      "searchStrings":[
+         "cointerra"
       ]
    },
    {
@@ -98,10 +133,24 @@
       ]
    },
    {
+      "poolName":"KNCminer",
+      "url":"https://www.kncminer.com/",
+      "searchStrings":[
+         "KnCMiner"
+      ]
+   },
+   {
       "poolName":"Megabigpower",
       "url":"http://megabigpower.com/",
       "searchStrings":[
          "megabigpower.com"
+      ]
+   },
+   {
+      "poolName":"MultiCoin",
+      "url":"https://multicoin.co/",
+      "searchStrings":[
+         "MultiCoin.co"
       ]
    },
    {
