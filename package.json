@@ -54,7 +54,7 @@
     "async": "*",
     "base58-native": "0.1.2",
     "bignum": "*",
-    "bitcore": "git://github.com/Dogeparty/dogecore.git#7b0c6d502f37b2f0ca48e10bd9aeb2de18337f81",
+    "bitcore": "git://github.com/Dogeparty/dogecore.git#b9f219e97a2954c345d4c202082c7e15c241200f",
     "bufferput": "git://github.com/bitpay/node-bufferput.git",
     "buffertools": "*",
     "commander": "^2.3.0",
