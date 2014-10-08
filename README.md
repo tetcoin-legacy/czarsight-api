@@ -69,10 +69,13 @@ BITCOIND_USER         # RPC username
 BITCOIND_PASS         # RPC password
 BITCOIND_DATADIR      # bitcoind datadir. 'testnet3' will be appended automatically if testnet is used. NEED to finish with '/'. e.g: `/vol/data/`
 INSIGHT_NETWORK [= 'livenet' | 'testnet']
+INSIGHT_PORT          # insight api port
 INSIGHT_DB            # Path where to store insight's internal DB. (defaults to $HOME/.insight)
 INSIGHT_SAFE_CONFIRMATIONS=6  # Nr. of confirmation needed to start caching transaction information   
 INSIGHT_IGNORE_CACHE  # True to ignore cache of spents in transaction, with more than INSIGHT_SAFE_CONFIRMATIONS confirmations. This is useful for tracking double spents for old transactions.
 ENABLE_MAILBOX # if "true" will enable mailbox plugin
+ENABLE_CLEANER # if "true" will enable message db cleaner plugin
+ENABLE_MONITOR # if "true" will enable message db monitor plugin
 ENABLE_RATELIMITER # if "true" will enable the ratelimiter plugin
 LOGGER_LEVEL # defaults to 'info', can be 'debug','verbose','error', etc.
 ENABLE_HTTPS # if "true" it will server using SSL/HTTPS
