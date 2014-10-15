@@ -24,15 +24,15 @@ var home = process.env.INSIGHT_DB || (getUserHome() + '/.insight');
 if (process.env.INSIGHT_NETWORK === 'livenet') {
   env = 'livenet';
   db = home;
-  port = '3000';
-  b_port = '8332';
-  p2p_port = '8333';
+  port = '4000';
+  b_port = '8814';
+  p2p_port = '8916';
 } else {
   env = 'testnet';
   db = home + '/testnet';
-  port = '3001';
-  b_port = '18332';
-  p2p_port = '18333';
+  port = '4001';
+  b_port = '18814';
+  p2p_port = '18816';
 }
 port = parseInt(process.env.INSIGHT_PORT) || port;
 
