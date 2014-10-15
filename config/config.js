@@ -25,14 +25,14 @@ if (process.env.INSIGHT_NETWORK === 'livenet') {
   env = 'livenet';
   db = home;
   port = '4000';
-  b_port = '8814';
-  p2p_port = '8916';
+  b_port = '8816';
+  p2p_port = '8814';
 } else {
   env = 'testnet';
   db = home + '/testnet';
   port = '4001';
-  b_port = '18814';
-  p2p_port = '18816';
+  b_port = '18816';
+  p2p_port = '18814';
 }
 port = parseInt(process.env.INSIGHT_PORT) || port;
 
@@ -56,9 +56,9 @@ var isWin = /^win/.test(process.platform);
 var isMac = /^darwin/.test(process.platform);
 var isLinux = /^linux/.test(process.platform);
 if (!dataDir) {
-  if (isWin) dataDir = '%APPDATA%\\Bitcoin\\';
-  if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Bitcoin/';
-  if (isLinux) dataDir = process.env.HOME + '/.bitcoin/';
+  if (isWin) dataDir = '%APPDATA%\\Czarcoin\\';
+  if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Czarcoin/';
+  if (isLinux) dataDir = process.env.HOME + '/.czarcoin';
 }
 dataDir += network === 'testnet' ? 'testnet3' : '';
 
