@@ -35,6 +35,7 @@ db/blocks/*
 db/blocks
 db/testnet/blocks/*
 db/testnet/blocks
+config/config.js
 
 README.html
 public
